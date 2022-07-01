@@ -1,0 +1,15 @@
+.card {
+  background-color: white;
+
+  border-radius: 10px;
+  box-shadow: 5px, 10px #888888;
+  max-width: max-content;
+  min-width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}

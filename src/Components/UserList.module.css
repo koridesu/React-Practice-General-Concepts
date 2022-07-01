@@ -1,0 +1,10 @@
+.user-list {
+  margin-top: 10px;
+  min-width: 400px;
+  max-width: 400px;
+
+  /* width: max-content; */
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
+}
