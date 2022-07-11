@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import { Fragment, useReducer, useState } from 'react';
 import Card from './UI/Card';
 import classes from './AddUser.module.css';
 import Button from './UI/Button';
 import { User } from '../Constants/Interfaces';
 import ErrorBox from './UI/ErrorBox';
+
 interface Props {
   addUser: (user: any) => void;
 }
@@ -51,12 +52,12 @@ function AddUser(props: Props) {
   };
 
   return (
-    <div>
+    <Fragment>
       {error && (
         <ErrorBox
           className={classes['error-empty-user']}
-          errorName='Hata'
-          errorDesc='Bos girdiniz'
+          errorName='Error on AddUser'
+          errorDesc='Name can not be empty or age can not less than 0'
           onClick={onErrorConfirm}
         ></ErrorBox>
       )}
@@ -79,7 +80,7 @@ function AddUser(props: Props) {
           <Button type='submit'>Add User</Button>
         </form>
       </Card>
-    </div>
+    </Fragment>
   );
 }
 
